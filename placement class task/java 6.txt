@@ -1,0 +1,25 @@
+import java.util.Scanner;
+public class TrafficLightSimulation {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the traffic light color (R for Red, Y for Yellow, G for Green): ");
+        String color = scanner.nextLine().toUpperCase();
+        switch (color) {
+            case "R":
+                System.out.println("Red means STOP.");
+                break;
+            case "Y":
+                System.out.println("Yellow means GET READY.");
+                break;
+            case "G":
+                System.out.println("Green means GO.");
+                break;
+            default:
+                System.out.println("Invalid color entered.");
+                break;
+        }
+        scanner.close();
+    }
+}
+Enter the traffic light color (R for Red, Y for Yellow, G for Green): y
+Yellow means GET READY.

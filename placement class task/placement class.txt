@@ -1,0 +1,23 @@
+import java.util.Scanner;
+public class ElectricityBillCalculator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the number of units consumed: ");
+        int units = scanner.nextInt();
+        double billAmount = 0;
+        if (units <= 100) {
+            billAmount = units * 5;
+        } else if (units <= 300) {
+            billAmount = 100 * 5 + (units - 100) * 7;
+        } else {
+            billAmount = 100 * 5 + 200 * 7 + (units - 300) * 10;
+        }
+        if (billAmount > 2000) {
+            billAmount += billAmount * 0.10;  // Add 10% surcharge
+        }
+        System.out.printf("Total electricity bill: ₹%.2f\n", billAmount);
+        scanner.close();
+    }
+}
+Enter the number of units consumed: 500
+Total electricity bill: ?4290.00

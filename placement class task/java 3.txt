@@ -1,0 +1,21 @@
+import java.util.Scanner;
+public class ShoppingDiscountSystem {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the total amount: ₹");
+        double totalAmount = scanner.nextDouble();
+        double discount = 0;
+        if (totalAmount > 5000) {
+            discount = 0.20 * totalAmount;
+        } else if (totalAmount > 2000) {
+            discount = 0.10 * totalAmount;
+        } 
+        double finalAmount = totalAmount - discount;
+        System.out.printf("Discount applied: ₹%.2f\n", discount);
+        System.out.printf("Final amount to pay: ₹%.2f\n", finalAmount);
+        scanner.close();
+    }
+}
+Enter the total amount: ?6000
+Discount applied: ?1200.00
+Final amount to pay: ?4800.00

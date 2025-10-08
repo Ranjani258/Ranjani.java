@@ -1,0 +1,17 @@
+import java.util.Scanner;
+public class ATMWithdrawal {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter your balance: ");
+        double balance = scanner.nextDouble();
+        System.out.print("Enter withdrawal amount: ");
+        double withdrawal = scanner.nextDouble();
+        if (withdrawal <= balance) {
+            balance -= withdrawal;
+            System.out.printf("Withdrawal successful! New balance: $%.2f\n", balance);
+        } else {
+            System.out.println("Insufficient Balance");
+        }
+        scanner.close();
+    }
+}

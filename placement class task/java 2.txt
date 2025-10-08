@@ -1,0 +1,38 @@
+import java.util.Scanner;
+public class StudentGradeSystem {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int totalMarks = 0;
+        int numberOfSubjects = 5;
+        for (int i = 1; i <= numberOfSubjects; i++) {
+            System.out.print("Enter marks for subject " + i + ": ");
+            int marks = scanner.nextInt();
+            totalMarks += marks;
+        }
+        double average = totalMarks / (double) numberOfSubjects;
+        char grade;
+        String gradeStr;
+        if (average >= 90) {
+            gradeStr = "A+";
+        } else if (average >= 80) {
+            gradeStr = "A";
+        } else if (average >= 70) {
+            gradeStr = "B";
+        } else if (average >= 60) {
+            gradeStr = "C";
+        } else {
+            gradeStr = "Fail";
+        }
+        System.out.printf("Average marks: %.2f\n", average);
+        System.out.println("Grade: " + gradeStr);92
+        scanner.close();
+    }
+}
+
+Enter marks for subject 1: 90
+Enter marks for subject 2: 59
+Enter marks for subject 3: 48
+Enter marks for subject 4: 46
+Enter marks for subject 5: 99
+Average marks: 68.40
+Grade: C
