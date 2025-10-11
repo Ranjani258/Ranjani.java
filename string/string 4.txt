@@ -1,0 +1,22 @@
+public class DuplicateCharsSimple {
+
+    public static void findDuplicates(String input) {
+        input = input.toLowerCase();  // optional: ignore case
+        for (char c = 'a'; c <= 'z'; c++) {
+            int count = 0;
+            for (int i = 0; i < input.length(); i++) {
+                if (input.charAt(i) == c) {
+                    count++;
+                }
+            }
+            if (count > 1) {
+                System.out.println(c + " appears " + count + " times");
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        String text = "Programming";
+        findDuplicates(text);
+    }
+}

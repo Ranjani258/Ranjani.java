@@ -1,0 +1,26 @@
+public class PalindromeChecker {
+
+    public static boolean isPalindrome(String input) {
+        input = input.replaceAll("\\s+", "").toLowerCase();
+
+        int left = 0;
+        int right = input.length() - 1;
+
+        while (left < right) {
+            if (input.charAt(left) != input.charAt(right)) {
+                return false; 
+            }
+            left++;
+            right--;
+        }
+        return true; 
+    }
+
+    public static void main(String[] args) {
+        String test1 = "Racecar";
+        String test2 = "Hello";
+
+        System.out.println(test1 + " is palindrome? " + isPalindrome(test1)); 
+        System.out.println(test2 + " is palindrome? " + isPalindrome(test2)); 
+    }
+}
