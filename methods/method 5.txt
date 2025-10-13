@@ -1,0 +1,7 @@
+class StringLength {
+    public static void main(String[] args) {
+        String str = "Hello, World!";
+        int len = str.length();  // calling predefined method length()
+        System.out.println("Length of the string: " + len);
+    }
+}

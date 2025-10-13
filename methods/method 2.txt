@@ -1,0 +1,14 @@
+class student{
+    String name;
+    int  age;
+    void display(){
+        System.out.println("Name : " + name);
+        System.out.println("Age : " + age);
+    }
+    public static void main(String[] args){
+        student s=new student();
+        s.name="niha";
+        s.age=2;
+        s.display();
+    }
+}
